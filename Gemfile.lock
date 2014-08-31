@@ -43,23 +43,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    cucumber (1.3.16)
-      builder (>= 2.1.2)
-      diff-lcs (>= 1.1.3)
-      gherkin (~> 2.12)
-      multi_json (>= 1.7.5, < 2.0)
-      multi_test (>= 0.1.1)
-    cucumber-rails (1.4.1)
-      capybara (>= 1.1.2, < 3)
-      cucumber (>= 1.3.8, < 2)
-      mime-types (~> 1.16)
-      nokogiri (~> 1.5)
-      rails (>= 3, < 5)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (2.2.1)
-    gherkin (2.12.2-x86-mingw32)
-      multi_json (~> 1.3)
     hike (1.2.3)
     i18n (0.6.11)
     journey (1.0.4)
@@ -74,7 +60,6 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.6.0)
     multi_json (1.10.1)
-    multi_test (0.1.1)
     nokogiri (1.6.3.1-x86-mingw32)
       mini_portile (= 0.6.0)
     polyglot (0.3.5)
@@ -141,8 +126,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  capybara
   coffee-rails (~> 3.2.1)
-  cucumber-rails
   jquery-rails
   rails (= 3.2.9)
   rspec-rails
