@@ -1,0 +1,24 @@
+<div class="well well-lg">
+ <%= form_for @user, :html => {:class => "form-horizontal"} do |f|  %>
+    <fieldset>
+      <legend class="text-center header">New User Info</legend>
+        <div class="form-group">
+          <span class="col-md-2">Username:</span>
+          <div class="col-md-8"><%= f.text_field :username, :placeholder => 'username', :class=> 'form-control' %></div>
+        </div>
+        <div class="form-group">
+          <span class="col-md-2">First Name:</span>
+          <div class="col-md-8"><%= f.text_field :first_name, :placeholder => 'First Name', :class=> 'form-control' %></div>
+        </div>
+        <div class="form-group">
+          <span class="col-md-2">Last Name:</span>
+          <div class="col-md-8"><%= f.text_field :last_name, :placeholder => 'Last Name', :class=> 'form-control' %></div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-10 text-center">
+            <%= f.submit :class => "btn btn-sm btn-primary"%> <%= link_to 'Cancel', users_path, :class => "btn btn-sm btn-primary" %></li>
+          </div>
+        </div>
+    </fieldset>
+<% end %>
+</div>
