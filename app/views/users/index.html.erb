@@ -1,7 +1,14 @@
 <h1>Users</h1>
-<%= link_to "Add User", new_user_path, :class => "btn btn-lg btn-primary" %>
-<ul>
-<% @users.each do |user| %>
-    <li><%= user.full_name%></li>
-<% end %>
-</ul>
+<%= link_to 'Add User', new_user_path, :class => 'btn btn-sm btn-primary' %>
+<br />
+<br />
+<div class="well well-lg">
+    <ul class="list-group">
+    <% @users.each do |user| %>
+        <li class="list-group-item">
+          <span class="col-md-4"><%= user.full_name%></span>
+          <%= button_to 'Delete', user, :method => 'delete', :class => 'btn btn-sm btn-danger' %>
+        </li>
+    <% end %>
+    </ul>
+</div>
