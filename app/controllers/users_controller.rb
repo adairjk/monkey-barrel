@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.save
+    if @user.update_attributes(params[:user])
       redirect_to users_path, :notice => "User has been updated"
     else
       redirect_to users_path, :alert => "Error up dating user information"
