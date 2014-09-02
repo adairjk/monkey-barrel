@@ -7,7 +7,8 @@
     <% @users.each do |user| %>
         <li class="list-group-item">
           <span class="col-md-4"><%= user.full_name%></span>
-          <%= button_to 'Delete', user, :method => 'delete', :class => 'btn btn-sm btn-danger' %>
+          <%= link_to 'Edit', edit_user_path(user.id), :class => 'btn btn-sm btn-info' %>
+          <%= link_to 'Delete', user, :method => 'delete', :class => 'btn btn-sm btn-danger', :style => 'display: inline-block;' %>
         </li>
     <% end %>
     </ul>
