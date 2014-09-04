@@ -40,4 +40,28 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => 'User has been deleted'
     end
   end
+
+  def user_params
+    params.require(:user).permit(:name, :tag_list) ## Rails 4 strong params usage
+  end
+
+  def add_tag
+    @user = User.find(params[:id])
+    @user.tag_list.add(params[:tag])
+    if @user.save
+      redirect_to users_path, :notice => "Tags have been updated successfully"
+    else
+      redirect_to users_path, :alert => "Error updating tags"
+    end
+  end
+
+  def remove_tag
+    @user = User.find(params[:id])
+    @user.tag_list.remove(params[:tag])
+    if @user.save
+      redirect_to users_path, :notice => "Tags have been updated successfully"
+    else
+      redirect_to users_path, :alert => "Error updating tags"
+    end
+  end
 end

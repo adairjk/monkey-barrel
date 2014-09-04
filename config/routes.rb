@@ -1,7 +1,12 @@
 MonkeyBarrel::Application.routes.draw do
   root to: 'application#index'
 
-  resources :users
+  resources :users do
+    member do
+      post 'add_tag'
+      post 'remove_tag'
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
